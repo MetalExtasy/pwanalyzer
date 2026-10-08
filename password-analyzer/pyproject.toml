@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pwanalyzer"
+version = "0.1.0"
+description = "Command-line password strength analyzer with pattern detection and breach checking"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+
+[project.scripts]
+pwcheck = "pwanalyzer.cli:main"
+
+[tool.setuptools]
+packages = ["pwanalyzer"]
+
+[tool.setuptools.package-data]
+pwanalyzer = ["common_passwords.txt"]
